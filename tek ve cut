@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <input id="n" type="number" min="0" />
+        <button onclick="cutTek()">Ok</button>
+        <span id="ntc"></span>
+
+        <script>
+            const n = document.getElementById("n")
+            const ntc = document.getElementById("ntc")
+
+            function cutTek() {
+                ntc.innerHTML = (n.value % 2) ? 'tek' :
+                                (n.value == 0) ? 'sifir' : 'cut'
+                /*
+                if ( n.value % 2 ) ntc.innerHTML = 'tek'
+                else if (n.value == 0) ntc.innerHTML = 'sifir'
+                    else ntc.innerHTML = 'cut'
+                */
+            }
+        </script>
+    </body>
+</html>
